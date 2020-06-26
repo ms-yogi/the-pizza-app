@@ -1,0 +1,20 @@
+/* -------------------------------------------------- */
+/* ------------- All typographic styles ------------- */
+/* -------------------------------------------------- */
+
+@import './colors';
+
+h1 {
+	font-size: 24px;
+	color: $primary-color;
+	text-transform: uppercase;
+}
+
+p {
+	margin-bottom: 0;
+}
+
+.muted--text {
+	color: $gray-color;
+	font-size: 12px;
+}

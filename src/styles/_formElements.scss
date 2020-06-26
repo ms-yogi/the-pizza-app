@@ -1,0 +1,120 @@
+/* -------------------------------------------------- */
+/* ------------ All form elements styles ------------ */
+/* -------------------------------------------------- */
+
+@import './colors';
+
+/* primary action button */
+.custom--primary--btn {
+	background-color: $primary-color;
+	color: $white-color;
+	max-width: 350px;
+
+	&:hover {
+		color: $white-color;
+		text-decoration: none;
+		background-color: $primary-dark-color;
+	}
+}
+
+.radio--label {
+	display: block;
+	position: relative;
+	padding-left: 24px;
+	margin-bottom: 0;
+	cursor: pointer;
+	font-size: 14px;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+
+	/* to hide default radio button */
+	input {
+		position: absolute;
+		opacity: 0;
+		cursor: pointer;
+	}
+
+	/* custom radio */
+	.radio--circle {
+		position: absolute;
+		top: 3px;
+		left: 0;
+		height: 15px;
+		width: 15px;
+		background-color: $white-bg-color;
+		border-radius: 50%;
+
+		&:after {
+			content: '';
+			position: absolute;
+			top: 4px;
+			left: 4px;
+			width: 7px;
+			height: 7px;
+			border-radius: 50%;
+			background: $white-color;
+		}
+	}
+
+	/* hover state */
+	&:hover input ~ .radio--circle {
+		background-color: $white-hover-color;
+	}
+
+	/* checked state */
+	input:checked ~ .radio--circle {
+		background-color: $primary-color;
+
+		&::after {
+			display: block;
+		}
+	}
+}
+
+.styled-checkbox {
+	// to hide default styling
+	opacity: 0;
+	display: none;
+
+	& + .checkbox-label {
+		position: relative;
+		margin-bottom: 0;
+	}
+
+	// give the basic color and theme
+	& + .checkbox-label::before {
+		content: '';
+		margin-right: 6px !important;
+		display: inline-block;
+		vertical-align: text-top;
+		width: 15px;
+		height: 15px;
+		background: $white-color;
+		border: 1px solid $primary-color;
+		border-radius: 50%;
+		opacity: 1;
+	}
+	// Add style when checked
+	&:checked + .checkbox-label::after {
+		content: '';
+		margin-right: 6px !important;
+		display: inline-block;
+		vertical-align: text-top;
+		width: 6.5px;
+		height: 7px;
+		background: #feb618;
+		border-radius: 50%;
+		opacity: 1;
+		left: 4px;
+		position: absolute;
+	}
+}
+
+// ----------- Media Queries ------------ //
+@media screen and (max-width: 768px) {
+	.custom--primary--btn {
+		font-size: 14px;
+	}
+}

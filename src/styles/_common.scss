@@ -1,0 +1,104 @@
+/* -------------------------------------------------- */
+/* -------------- Styles for all blocks ------------- */
+/* -------------------------------------------------- */
+
+@import './colors';
+
+* {
+	transition: all 0.2s ease-in-out;
+}
+
+body {
+	font-family: 'Lato', sans-serif;
+	overflow-y: hidden;
+}
+
+.pizza--pic {
+	background: url('../assets/pizza1.png');
+	background-color: $primary-color;
+	background-repeat: no-repeat;
+	background-position-y: center;
+	background-position-x: center;
+	background-size: 80vh;
+	width: 100vw;
+	height: 100vh;
+}
+
+.pizza--details {
+	height: 100vh;
+	padding: 64px;
+}
+
+.pizza--create--menu {
+	height: 100%;
+
+	h2 {
+		font-size: 42px;
+		font-weight: bold;
+		width: 80%;
+		line-height: 48px;
+		margin-bottom: 24px;
+	}
+
+	h3 {
+		font-size: 24px;
+		font-weight: bold;
+		line-height: 32px;
+		margin-bottom: 16px;
+	}
+
+	.info--text {
+		color: $dark-gray;
+		width: 70%;
+		margin-bottom: 24px;
+	}
+}
+
+.white--card {
+	background-color: $primary-light-color;
+	padding: 16px;
+	border-radius: 4px;
+	margin-bottom: 16px;
+}
+
+.pizza--topping {
+	max-height: 400px;
+	overflow-y: scroll;
+
+	.white--card {
+		padding: 8px;
+	}
+}
+
+.price-tag {
+	padding: 6px 16px;
+	border: 1px solid $primary-color;
+}
+
+.topping--img--container {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 50px;
+	width: 50px;
+	padding: 5px;
+	border-radius: 50%;
+	background: $white-color;
+}
+
+.topping--img {
+	width: auto;
+	height: 60px;
+}
+
+// ----------- Media Queries ------------ //
+
+@media screen and (max-width: 768px) {
+	.pizza--details {
+		padding: 40px;
+	}
+
+	.price-tag {
+		font-size: 14px;
+	}
+}

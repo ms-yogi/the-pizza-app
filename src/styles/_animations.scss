@@ -1,0 +1,59 @@
+/* -------------------------------------------------- */
+/* ----------------- All Animations ----------------- */
+/* -------------------------------------------------- */
+@import './colors';
+
+
+.animate-pop-in {
+	animation: pop-in 0.3s ease-out forwards;
+	opacity: 0;
+}
+
+.animate-pop-in-1 {
+	animation-delay: 0.1s;
+}
+.animate-pop-in-2 {
+	animation-delay: 0.15s;
+}
+.animate-pop-in-3 {
+	animation-delay: 0.2s;
+}
+
+@keyframes pop-in {
+	0% {
+		transform: translateX(64px) scale(0.8);
+		opacity: 0;
+	}
+	100% {
+		transform: none;
+		opacity: 1;
+	}
+}
+
+
+
+.animate-pop-up {
+	animation: pop-in 0.3s ease-out forwards;
+	opacity: 0;
+}
+
+.animate-pop-up-1 {
+	animation-delay: 0.1s;
+}
+.animate-pop-up-2 {
+	animation-delay: 0.15s;
+}
+.animate-pop-up-3 {
+	animation-delay: 0.2s;
+}
+
+@keyframes pop-in {
+	0% {
+		transform: translateY(-32px);
+		opacity: 0;
+	}
+	100% {
+		transform: none;
+		opacity: 1;
+	}
+}
